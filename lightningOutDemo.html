@@ -1,0 +1,34 @@
+<html>
+    <style>
+    
+    </style>
+    <script src="https://infa--rohitn.sandbox.my.site.com/lwcdemo/lightning/lightning.out.js"></script>
+    <div data-lightning-out="true"></div>
+    <script>
+        const appName = 'c:lwcDemo'
+        const componentName = 'c:accountManagerLDSForms'
+        const lightningEndPoint = 'https://infa--rohitn.sandbox.my.site.com/lwcdemo'
+        const targetElement = document.querySelector('[data-lightning-out]');
+        const componentAttributes = {
+
+
+        };
+
+        $Lightning.use(
+            appName,
+            function(){
+                $Lightning.createComponent(
+                    componentName,
+                    componentAttributes,
+                    targetElement,
+                    function(cmp){
+                        console.log('Lightning Component Created');
+                    }
+                );
+            },
+            lightningEndPoint
+        );
+
+        
+    </script>
+</html>
