@@ -1,34 +1,24 @@
     <html>
-        <style>
-        
-        </style>
+    <head>
+        <title>LWC Demo</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <script src="https://infa--rohitn.sandbox.lightning.force.com/lightning/lightning.out.js"></script>
-        <div data-lightning-out="true"></div>
         <script>
-            const appName = 'c:lwcDemo'
-            const componentName = 'c:accountManagerLDSForms'
-            const lightningEndPoint = 'https://infa--rohitn.sandbox.lightning.force.com'
-            const targetElement = document.querySelector('[data-lightning-out]');
-            const componentAttributes = {
-
-
-            };
-
-            $Lightning.use(
-                appName,
-                function(){
-                    $Lightning.createComponent(
-                        componentName,
-                        componentAttributes,
-                        targetElement,
-                        function(cmp){
-                            console.log('Lightning Component Created');
-                        }
-                    );
-                },
-                lightningEndPoint
-            );
-
-            
+            $Lightning.use("c:lightningOutApp", function() {
+                $Lightning.createComponent(
+                    "c:accountManagerLDSForms",
+                    {},
+                    document.getElementById("container"),
+                    function(cmp) {
+                        // Do something after the component is created
+                    }
+                );
+            });
         </script>
+    </head>
+    <body>
+        <div id="container"></div>
+    </body>
     </html>
+    
